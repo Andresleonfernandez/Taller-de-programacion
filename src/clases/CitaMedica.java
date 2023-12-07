@@ -67,8 +67,9 @@ public class CitaMedica {
             System.out.println("            CLINICA NUEVA VIDAD");
             System.out.println("SI NO TE SALVAMOS, SI TE COMBRAMOS XD");
             System.out.println("------------------------------------------");
+            System.out.println("Imagen del doctor: "+cita.getNombreDoctor().getImagen());
             System.out.println("Nombre del doctor: " + cita.getNombreDoctor().NombreCompletoD());
-            System.out.println("Especialidad: " + cita.getNombreDoctor().getEspecialidad().getDescripcion());
+            System.out.println("Especialidad: " + cita.getNombreDoctor().getEspecialidad().getNombre());
             System.out.println("Costo: " + cita.getNombreDoctor().getEspecialidad().getPrecio());
             System.out.println("Nombre del paciente: " + cita.getNombrePaciente().NombreCompletoP());
             System.out.println("DNI: " + cita.getNombrePaciente().getDni());

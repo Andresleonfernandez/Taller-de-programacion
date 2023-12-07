@@ -14,14 +14,16 @@ public class Doctor {
     private Especialidad Especialidad;
     private ArrayList<Horario> horario;
     private int opcion;
+    private String imagen;
     
-    public Doctor(String nombre,String ApellidoP,String ApellidoM,Especialidad Especialidad,ArrayList<Horario> horario,int opcion){
+    public Doctor(String nombre,String ApellidoP,String ApellidoM,Especialidad Especialidad,ArrayList<Horario> horario,int opcion,String imagen){
         this.Nombre=nombre;
         this.ApellidoP=ApellidoP;
         this.ApellidoM=ApellidoM;
         this.Especialidad=Especialidad;
         this.horario=horario;
         this.opcion=opcion;
+        this.imagen=this.imagen;
     }
     
 
@@ -76,7 +78,14 @@ public class Doctor {
     public String NombreCompletoD(){
         return getNombre()+" "+getApellidoP()+" "+getApellidoM();
     }
-    
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
     
     public void MostrarInfoD() {
         System.out.println("["+opcion+"]"+" Especialidad: " + Especialidad.getNombre());
@@ -97,6 +106,7 @@ public class Doctor {
             MostrarHorarioD();
             System.out.print("Seleccione el horario deseado para su cita: ");
             int opcionS = sc.nextInt();
+            sc.nextLine();
 
             if (opcionS > 0 && opcionS <= getHorario().size()) {
                 Horario horarioSelec = getHorario().get(opcionS - 1);

@@ -74,10 +74,13 @@ public class Paciente {
         setApellidoM(sc.nextLine());
         System.out.print("Edad: ");
         setEdad(sc.nextInt());
+        sc.nextLine();
         System.out.print("DNI: ");
         setDni(sc.nextInt());
+        sc.nextLine();
         System.out.print("Telefono: ");
         setTelefono(sc.nextInt());
+        sc.nextLine();
     }
     
     public String NombreCompletoP(){
