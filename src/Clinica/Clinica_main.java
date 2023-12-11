@@ -21,22 +21,22 @@ public class Clinica_main{
     
         
         Especialidad E1=new Especialidad("Cardiologia", "318", 135); 
-        Doctor D1=new Doctor("Jose","Perez", "Dominguez", E1, Horario.HorariosCardiologia(),1,"C:\\Users\\NILTON.PRINCIPAL.000\\Desktop\\doctorimgenes\\D1.jpg");        
+        Doctor D1=new Doctor("Jose","Perez", "Dominguez", E1, Horario.HorariosCardiologia(),1,"https://pbs.twimg.com/profile_images/1309266094889332737/G-o2UUH2_400x400.jpg");        
         
         Especialidad E2=new Especialidad("Nutricion", "079", 50);
-        Doctor D2=new Doctor("Jose", "Delgado", "Padilla", E2,Horario.HorariosNutricion(),2,"C:\\Users\\NILTON.PRINCIPAL.000\\Desktop\\doctorimgenes\\D2.jpg");
+        Doctor D2=new Doctor("Jose", "Delgado", "Padilla", E2,Horario.HorariosNutricion(),2,"https://www.hackensackmeridianhealth.org/-/media/project/hmh/hmh/public/healthu/harsouni-imad-cropped.jpg");
                
         Especialidad E3=new Especialidad("Psicologia", "361", 40);
-        Doctor D3=new Doctor("Joan", "Esther", "Smith", E3,Horario.HorariosPsicologia(),3,"C:\\Users\\NILTON.PRINCIPAL.000\\Desktop\\doctorimgenes\\D3.jpg");
+        Doctor D3=new Doctor("Joan", "Esther", "Smith", E3,Horario.HorariosPsicologia(),3,"https://s3-eu-west-1.amazonaws.com/intercare-web-public/wysiwyg-uploads%2F1569586526901-doctor.jpg");
                
         Especialidad E4=new Especialidad("Medicina Genereal", "859", 45);
-        Doctor D4=new Doctor("Nicole", "Rodriguez", "Sanches",E4, Horario.HorariosMedicinaGenereal(),4,"C:\\Users\\NILTON.PRINCIPAL.000\\Desktop\\doctorimgenes\\D4.jpg");
+        Doctor D4=new Doctor("Nicole", "Rodriguez", "Sanches",E4, Horario.HorariosMedicinaGenereal(),4,"https://www.wellingtonregional.com/sites/wellingtonregional.com/files/doctors_visit_1200x900.jpg");
         
         Especialidad E5=new Especialidad("Pediatria", "394", 60);
-        Doctor D5 = new Doctor("William", "Afton", "P.", E5,Horario.HorariosPediatria(),5,"C:\\Users\\NILTON.PRINCIPAL.000\\Desktop\\doctorimgenes\\D5.jpg");
+        Doctor D5 = new Doctor("William", "Afton", "P.", E5,Horario.HorariosPediatria(),5,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLJkxZXPsiXcGWGiI34EXwnlT0-hUMVNSrBQ&usqp=CAU");
         
-        System.out.println(" ----- CLINICA NUEVA VIDA ----- ");
-        System.out.println(" ______________________________ ");
+        System.out.println("  ----- CLINICA NUEVA VIDA ----- ");
+        System.out.println("___________________________________");
         System.out.println("      RESERVA TU CITA AQUI ");
         System.out.println("___________________________________");
         System.out.print("Por Favor ingrese la cantidad de citas que desea aguendar: ");
@@ -71,7 +71,6 @@ public class Clinica_main{
                         citasClinica[i].setNombrePaciente(P1);
                         citasClinica[i].getDia();
                         citasClinica[i].getHora();
-                        CitaMedica.imprimirCita(citasClinica[i]);
                         break;
                     case 2:
                         D2.programarCita();
@@ -80,7 +79,6 @@ public class Clinica_main{
                         citasClinica[i].setNombrePaciente(P1);
                         citasClinica[i].getDia();
                         citasClinica[i].getHora();
-                        CitaMedica.imprimirCita(citasClinica[i]);
                         break;
                     case 3:
                         D3.programarCita();
@@ -89,7 +87,6 @@ public class Clinica_main{
                         citasClinica[i].setNombrePaciente(P1);
                         citasClinica[i].getDia();
                         citasClinica[i].getHora();
-                        CitaMedica.imprimirCita(citasClinica[i]);
                         break;
                     case 4:
                         D4.programarCita();
@@ -98,7 +95,6 @@ public class Clinica_main{
                         citasClinica[i].setNombrePaciente(P1);
                         citasClinica[i].getDia();
                         citasClinica[i].getHora();
-                        CitaMedica.imprimirCita(citasClinica[i]);
                         break;
                     case 5:
                         D5.programarCita();
@@ -107,7 +103,6 @@ public class Clinica_main{
                         citasClinica[i].setNombrePaciente(P1);
                         citasClinica[i].getDia();
                         citasClinica[i].getHora();
-                        CitaMedica.imprimirCita(citasClinica[i]);
                         break;
                     default:
                 System.out.println("Opcion no valida, intente de nuevo :3 ");
@@ -115,7 +110,14 @@ public class Clinica_main{
             }            
             }
         }
-        System.out.println("GRACIAS POR SU PREFERENCI VUELVA PRONTO :3");
+        System.out.println("________________________________________________________________");
+        System.out.println("                       CLINICA NUEVA VIDAD");
+        System.out.println("               SI NO TE SALVAMOS, SI TE COMBRAMOS XD            ");
+        System.out.println("________________________________________________________________");
+        for(int i=0;i<citasClinica.length;i++){
+        CitaMedica.imprimirCita(citasClinica[i]);
+        }
+        System.out.println("GRACIAS POR SU PREFERENCIA VUELVA PRONTO :3");
         
         StringBuilder HTML = new StringBuilder();
         HTML.append("<html><head><title>CLINICA NUEVA VIDA</title></head><body>");
@@ -123,20 +125,19 @@ public class Clinica_main{
         HTML.append("<p></p>");
         
         for(int i=0;i<citasClinica.length;i++){
-        HTML.append("<div");
-        HTML.append("<h2>CITA N°"+(i+1)+"");
+        HTML.append("<div>");
+        HTML.append("<h2>CITA N°"+(i+1)+"</H2>");
+        HTML.append("</div>");
         HTML.append("<img src=\"" + citasClinica[i].getNombreDoctor().getImagen() + "\">");
-        HTML.append("<p>-------------------------------------------</p>");
+        HTML.append("<p>________________________________________________________________</p>");
         HTML.append("<p>NOMBRE DEL DOCTOR:"+citasClinica[i].getNombreDoctor().NombreCompletoD()+"</p>");
         HTML.append("<p>ESPECIALIDAD: "+citasClinica[i].getNombreDoctor().getEspecialidad().getNombre()+"</p>");
         HTML.append("<p>PRECIO: "+citasClinica[i].getNombreDoctor().getEspecialidad().getPrecio()+"</p>");
         HTML.append("<p>NOMBRE DEL PACIENTE: "+citasClinica[i].getNombrePaciente().NombreCompletoP()+"</p>");
         HTML.append("<p>DNI DEL PACIENTE:"+citasClinica[i].getNombrePaciente().getDni()+"</p>");
         HTML.append("<p>NUMERO DE CONTACTO:"+citasClinica[i].getNombrePaciente().getTelefono()+"</p>");
-        HTML.append("<p>-------------------------------------------</p>");
-        HTML.append("<footer><p>ESTA CLINICA ES PRIVADA SI NO PAGAS LA CUENTA ADIOS CABEZA ):C");
-        HTML.append("<p></p>");
-        HTML.append("<p></p>");
+        HTML.append("<p>________________________________________________________________</p>");
+        HTML.append("<footer><p>ESTA CLINICA ES PRIVADA, PAGA O TE MANDAMOS A MATATAR XD</p></footer>");
         HTML.append("</body></html>");
         
         String rutaArcivo="C:\\Users\\NILTON.PRINCIPAL.000\\Desktop\\doctorimgenes\\Citas.html";

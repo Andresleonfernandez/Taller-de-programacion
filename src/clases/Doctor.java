@@ -23,7 +23,7 @@ public class Doctor {
         this.Especialidad=Especialidad;
         this.horario=horario;
         this.opcion=opcion;
-        this.imagen=this.imagen;
+        this.imagen=imagen;
     }
     
 

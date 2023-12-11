@@ -75,11 +75,16 @@ public class Paciente {
         System.out.print("Edad: ");
         setEdad(sc.nextInt());
         sc.nextLine();
-        System.out.print("DNI: ");
-        setDni(sc.nextInt());
+        do {
+            System.out.print("DNI (8 digitos): ");
+            dni = sc.nextInt();
+        } while (dni < 10000000 || dni > 99999999);
+        
         sc.nextLine();
-        System.out.print("Telefono: ");
-        setTelefono(sc.nextInt());
+        do {
+            System.out.print("Numero de Contacto (9 digitos y tiene que iniciar en 9) ");
+            telefono = sc.nextInt();
+        } while (telefono < 900000000 || telefono > 999999999);
         sc.nextLine();
     }
     
